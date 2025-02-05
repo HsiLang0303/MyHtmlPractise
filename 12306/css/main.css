@@ -1,0 +1,320 @@
+.white-nav {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 2px 4px #b3b3b3;
+}
+
+.white-nav .nav_left {
+    float: left;
+    margin: 15px 0 0 140px;
+}
+
+.white-nav .nav_right {
+    width: 1130px;
+    height: 70px;
+    border: 0px solid red;
+    float: right;
+    margin-top: 10px;
+    background-image: url(../images/train.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 1130px 40px;
+    line-height: 70px;
+
+    input {
+        width: 380px;
+        height: 25px;
+        margin-left: 100px;
+        padding-left: 4px;
+    }
+
+    img {
+        position: relative;
+        top: 10px;
+        left: -6px;
+    }
+}
+
+.nav {
+    width: 390px;
+    height: 70px;
+    border: 0px solid green;
+    float: right;
+    margin-right: 115px;
+}
+
+.nav ul {
+    margin: 0;
+    line-height: 70px;
+}
+
+.nav li {
+    float: left;
+    list-style: none;
+    position: relative;
+
+    a {
+        text-decoration: none;
+        font-size: 12px;
+        color: rgb(96, 136, 231);
+    }
+
+    .shu {
+        color: rgb(172, 219, 242);
+        margin: 0 10px;
+    }
+
+    .yonghu {
+        color: black;
+        margin: 0 10px;
+
+    }
+}
+
+.yuyan {
+    border: 1px solid #424141;
+    position: absolute;
+    background-color: #e8e6e6;
+    width: 60px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -15px;
+    display: none;
+    line-height: 40px;
+
+    a {
+        margin-left: 2px;
+    }
+}
+
+.nav li:hover>.yuyan {
+    display: block;
+}
+
+/* 白色导航结束 */
+
+
+.nav2 {
+    width: 100%;
+    height: 40px;
+    background-color: #3b99fc;
+    .wrap {
+        width: 1200px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+    }
+    ul {
+        padding: 0;
+    }
+}
+
+
+
+.nav2 li {
+    list-style: none;
+    float: left;
+    height: 40px;
+    width: 148px;
+    border: 0px solid green;
+    text-align: center;
+}
+
+.nav2 li a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* 导航菜单结束 */
+
+.picture {
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/banner09.jpg);
+    animation: 30s lbt infinite;
+    position: relative;
+}
+
+@keyframes lbt {
+    0% {
+        background-image: url(../images/banner09.jpg);
+    }
+
+    25% {
+        background-image: url(../images/banner11.jpg);
+    }
+
+    50% {
+        background-image: url(../images/banner12.jpg);
+    }
+
+    75% {
+        background-image: url(../images/banner13.jpg);
+    }
+
+    100% {
+        background-image: url(../images/banner09.jpg);
+    }
+}
+
+.vote {
+    position: absolute;
+    background-color: rgba(218, 216, 216, 0.8);
+    width: 500px;
+    height: 350px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.vote_left {
+    float: left;
+    ul {
+        list-style: none;
+
+        li {
+
+            button {
+                color: #fff;
+                height: 87.5px;
+                line-height: 86.5px;
+                border-bottom: 1px solid #bcbcbc;
+                width: 90px;
+                background-color: #3b99fc;
+            }
+        }
+    }
+    ul li:last-child button {
+        border-bottom: 0;
+    }
+}
+.vote_right{
+    float: right;
+    background-color: #ffffff;
+    width: 410px;
+    height: 350px;
+}
+.contant{
+    display: none;
+}
+#content1 { display: block; }
+
+/* 客户预约开始 */
+.nav4{
+    width: 1200px;
+    height: 140px;
+    margin: 0 auto;
+    background-image: url(../images/bgline.png);
+}
+.nav4 li{
+    list-style: none;
+    width: 169px;
+    height: 140px;
+    float: left;
+    text-align: center;
+}
+.nav4 img{
+    margin-top: 37px;
+}
+.nav4 a{
+    font-size: 14px;
+    color: #333333;
+    text-decoration: none;
+}
+/* 客户预约结束 */
+
+/* 会员服务开始 */
+.nav5{
+    width: 1200px;
+    height: 340px;
+    margin: 0 auto;
+    div{
+        width: 590px;
+        height: 160px;
+        float: left;
+        margin: 5px 5px 5px 5px ;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+/* 会员服务结束 */
+
+/* 更多开始 */
+.nav6{
+    width: 1200px;
+    height: 40px;
+    margin: 0px auto;
+    line-height: 40px;
+    border-bottom: 2px solid #DEDEDE;
+    margin-top: 30px;
+}
+.nav6 span{
+    color: #3b99fc;
+    font-size: 18px;
+    float: left;
+    margin-left: 5px;
+}
+.nav6 a{
+    float: right;
+    font-size: 14px;
+    color: #999999;
+    text-decoration: none;
+    margin-right: 5px;
+}
+/* 更多结束 */
+
+/* 旅游内容开始 */
+.nav7{
+    width: 1200px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 10px;
+    div{
+        width: 286px;
+        height: 245px;
+        float: left;
+        margin: 20px 12.2px 0 0;
+        border: 1px solid #8a8a8a;
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 14px
+        }
+        .money{
+            color: #ff8201;
+            font-size: 18px;
+            margin-left: 8px;
+            margin-top: 4px;
+        }
+    }
+}
+/* 旅游内容结束 */
+
+/* 页尾信息开始 */
+.nav8{
+    margin-top: 40px;
+    height: 400px;
+    width: 100%;
+    .nav8_wrap{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+.nav8 .nav8_top button{
+    margin: 0 auto;
+    width: 356px;
+    height: 40px;
+    background-color: #b5b1b1;
+    border-radius: 4px;
+}
+.nav8 .nav8_bottom{
+    border: 1px solid #333333;
+}
+.nav8_caontant{
+    display: none;
+}
+#nav8_contant1 { display: block; }
+/* 页尾信息结束 */
