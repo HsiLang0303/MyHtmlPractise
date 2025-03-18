@@ -1,0 +1,102 @@
+0 verbose cli D:\codeEnvironment\node-v22.14.0-win-x64\node.exe D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.7\.npmrc
+5 silly config load:file:C:\Users\huang\.npmrc
+6 silly config load:file:D:\codeEnvironment\node\node_global\etc\npmrc
+7 verbose title npm install @types/core-js@ts5.7 @types/less@ts5.7
+8 verbose argv "install" "--ignore-scripts" "@types/core-js@ts5.7" "@types/less@ts5.7" "--save-dev" "--user-agent" "typesInstaller/5.7.3"
+9 verbose logfile logs-max:10 dir:D:\ToBeProgrammer\learnHtml\htmlProject\htmlPractice\网易严选\.npm-cache\_logs\2025-03-17T09_15_42_932Z-
+10 verbose logfile D:\ToBeProgrammer\learnHtml\htmlProject\htmlPractice\网易严选\.npm-cache\_logs\2025-03-17T09_15_42_932Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcore-js cache-miss
+15 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fless cache-miss
+16 http fetch GET 200 https://registry.npmmirror.com/@types%2fcore-js 199ms (cache revalidated)
+17 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcore-js set size:18749 disposed:false
+18 http fetch GET 200 https://registry.npmmirror.com/@types%2fless 223ms (cache revalidated)
+19 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fless set size:13698 disposed:false
+20 silly idealTree buildDeps
+21 silly fetch manifest @types/core-js@2.5.8
+22 silly packumentCache full:https://registry.npmmirror.com/@types%2fcore-js cache-miss
+23 http fetch GET 200 https://registry.npmmirror.com/@types%2fcore-js 67ms (cache revalidated)
+24 silly packumentCache full:https://registry.npmmirror.com/@types%2fcore-js set size:50629 disposed:false
+25 silly fetch manifest @types/less@3.0.8
+26 silly packumentCache full:https://registry.npmmirror.com/@types%2fless cache-miss
+27 http fetch GET 200 https://registry.npmmirror.com/@types%2fless 57ms (cache revalidated)
+28 silly packumentCache full:https://registry.npmmirror.com/@types%2fless set size:38403 disposed:false
+29 silly placeDep ROOT @types/core-js@2.5.8 REPLACE for:  want: 2.5.8
+30 silly placeDep ROOT @types/less@3.0.8 REPLACE for:  want: 3.0.8
+31 silly reify moves {}
+32 silly audit bulk request {
+32 silly audit   '@babel/helper-string-parser': [ '7.25.9' ],
+32 silly audit   '@babel/helper-validator-identifier': [ '7.25.9' ],
+32 silly audit   '@babel/parser': [ '7.26.9' ],
+32 silly audit   '@babel/types': [ '7.26.9' ],
+32 silly audit   '@types/babel__core': [ '7.20.5' ],
+32 silly audit   '@types/babel__generator': [ '7.6.8' ],
+32 silly audit   '@types/babel__template': [ '7.4.4' ],
+32 silly audit   '@types/babel__traverse': [ '7.20.6' ],
+32 silly audit   '@types/caseless': [ '0.12.5' ],
+32 silly audit   '@types/lodash': [ '4.17.16' ],
+32 silly audit   '@types/lodash-es': [ '4.17.12' ],
+32 silly audit   '@types/node': [ '22.13.1' ],
+32 silly audit   '@types/request': [ '2.48.12' ],
+32 silly audit   '@types/stylus': [ '0.48.43' ],
+32 silly audit   '@types/tough-cookie': [ '4.0.5' ],
+32 silly audit   '@types/winjs': [ '4.4.7' ],
+32 silly audit   asynckit: [ '0.4.0' ],
+32 silly audit   'combined-stream': [ '1.0.8' ],
+32 silly audit   'delayed-stream': [ '1.0.0' ],
+32 silly audit   'form-data': [ '2.5.2' ],
+32 silly audit   'mime-db': [ '1.52.0' ],
+32 silly audit   'mime-types': [ '2.1.35' ],
+32 silly audit   'safe-buffer': [ '5.2.1' ],
+32 silly audit   'types-registry': [ '0.1.712' ],
+32 silly audit   'undici-types': [ '6.20.0' ],
+32 silly audit   '@types/core-js': [ '2.5.8' ],
+32 silly audit   '@types/less': [ '3.0.8' ]
+32 silly audit }
+33 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/advisories/bulk 37ms
+34 silly audit bulk request failed [object Object]
+35 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/audits/quick 29ms
+36 verbose audit error HttpErrorGeneral: 404 Not Found - POST https://registry.npmmirror.com/-/npm/v1/security/audits/quick - [NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet
+36 verbose audit error     at D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\npm-registry-fetch\lib\check-response.js:103:15
+36 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+36 verbose audit error     at async [getReport] (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:336:21)
+36 verbose audit error     at async AuditReport.run (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:106:19)
+36 verbose audit error     at async Arborist.reify (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:268:24)
+36 verbose audit error     at async Install.exec (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\lib\commands\install.js:150:5)
+36 verbose audit error     at async Npm.exec (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\lib\npm.js:207:9)
+36 verbose audit error     at async module.exports (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\lib\cli\entry.js:74:5) {
+36 verbose audit error   headers: [Object: null prototype] {
+36 verbose audit error     server: [ 'Tengine' ],
+36 verbose audit error     date: [ 'Mon, 17 Mar 2025 09:15:44 GMT' ],
+36 verbose audit error     'content-type': [ 'application/json' ],
+36 verbose audit error     'transfer-encoding': [ 'chunked' ],
+36 verbose audit error     connection: [ 'keep-alive' ],
+36 verbose audit error     'strict-transport-security': [ 'max-age=5184000' ],
+36 verbose audit error     via: [ 'kunlun6.cn7902[,404666]' ],
+36 verbose audit error     'timing-allow-origin': [ '*' ],
+36 verbose audit error     eagleid: [ '7cedec1a17422029444063937e' ],
+36 verbose audit error     'x-fetch-attempts': [ '1' ]
+36 verbose audit error   },
+36 verbose audit error   statusCode: 404,
+36 verbose audit error   code: 'E404',
+36 verbose audit error   method: 'POST',
+36 verbose audit error   uri: 'https://registry.npmmirror.com/-/npm/v1/security/audits/quick',
+36 verbose audit error   body: {
+36 verbose audit error     error: '[NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet'
+36 verbose audit error   },
+36 verbose audit error   pkgid: undefined
+36 verbose audit error }
+37 silly audit error [object Object]
+38 silly audit report null
+39 verbose cwd C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.7
+40 verbose os Windows_NT 10.0.22631
+41 verbose node v22.14.0
+42 verbose npm  v10.9.2
+43 verbose exit 0
+44 info ok

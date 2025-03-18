@@ -1,0 +1,257 @@
+/* 头部样式开始 */
+.header {
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    font-size: 12px;
+    /* 行高等于高 一行文字垂直居中  行高具有继承性 */
+    line-height: 55px;
+}
+
+.header-left {
+    float: left;
+    width: 179px;
+    height: 54px;
+    background-color: #cf1132;
+    color: #fff;
+}
+
+.header-right {
+    float: right;
+    width: 138px;
+    height: 54px;
+    border-left: 1px solid #dadada;
+    color: #333;
+}
+
+/* 头部样式结束 */
+/* 导航样式开始 */
+.nav {
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    /* 背景图片不平铺  位置我是水平居中垂直居上 */
+    background: url("../images/nav_back_bg_fd2505e.jpg") no-repeat center top;
+}
+
+/* 水平居中的容器  不设置高度 高度由内容撑开 因为整个页面水平居中使用同一个class */
+.wrap {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.nav li {
+    float: left;
+    width: 84.2px;
+    height: 70px;
+}
+
+.nav a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav span {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.nav li:hover>a {
+    color: #000;
+}
+
+.active {
+    background: url("../images/nav_bg1_d44f09d.jpg") no-repeat;
+}
+
+.active>a {
+    color: #000;
+}
+
+.active span {
+    color: #c2a060;
+}
+
+.nav li:hover {
+    background: url("../images/nav_bg1_d44f09d.jpg") no-repeat;
+}
+
+.nav li:hover span {
+    color: #c2a060;
+}
+
+/* 下拉列表 */
+/* 
+核心思路：
+1）下拉列表绝对定位
+2）合适的父元素相对定位
+3）下拉列表display:none;隐藏
+4）鼠标悬停时下拉列表display:block;显示
+*/
+.nav-list {
+    z-index: 666;
+    /* 隐藏 */
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 140px;
+    background: url("../images/subnav_bg_5cc9309.jpg") no-repeat center 0;
+}
+
+.nav li:hover>.nav-list {
+    /* 显示 */
+    display: block;
+}
+
+/* 导航样式结束 */
+/* banner样式开始 */
+.banner {
+    position: relative;
+    top: -10px;
+    width: 100%;
+    height: 784px;
+    /* 溢出部分隐藏 */
+    overflow: hidden;
+}
+
+.banner>img {
+    /* 子元素在父元素中水平居中 */
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+
+.logo {
+    position: absolute;
+    left: 150px;
+    top: 143px;
+    width: 77px;
+    height: 247px;
+}
+
+.logo>a {
+    display: block;
+    width: 77px;
+    height: 247px;
+    background: url("../images/200.webp") no-repeat;
+    background-size: 100%;
+}
+
+/* banner样式结束 */
+/* 主体样式开始 */
+.container {
+    width: 1180px;
+    margin: 43px auto 0;
+}
+
+/* 主体样式结束 */
+/* 平安世界样式开始 */
+.world {
+    width: 100%;
+    height: 495px;
+    margin-bottom: 70px;
+}
+
+.world-title {
+    width: 54px;
+    height: 145px;
+    background: url("../images/index_z_203e03e.png");
+    background-position: -835px -532px;
+}
+
+.world-box {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-top: 23px;
+    background: url("../images/shishen_bg_000bc91.jpg") no-repeat center 0;
+}
+
+.world-img {
+    position: relative;
+    width: 940px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.world-img>a {
+    position: absolute;
+    top: 0;
+    width: 470px;
+    height: 320px;
+}
+
+.world-img>a:first-child {
+    left: 0;
+}
+
+.world-img>a:last-child {
+    right: 0;
+}
+
+.world-img>a:first-child>img {
+    position: relative;
+    top: -186px;
+    left: -140px;
+}
+
+.world-img>a:last-child img {
+    position: absolute;
+    top: -186px;
+    right: -140px;
+}
+
+/* 平安世界样式结束 */
+/* 游戏攻略样式开始 */
+.game{
+    width: 100%;
+    height: 510px;
+    background: url("../images/stategy_bg_4def7a7.jpg") no-repeat;
+    background-position: 0 174px;
+}
+.game-title{
+    float: left;
+    width: 55px;
+    height: 145px;
+    background: url("../images/index_z_203e03e.png");
+    background-position: -898px -532px;
+}
+.game-box{
+    float: right;
+    width: 1080px;
+    height: 209px;
+}
+.game-box>div{
+    position: relative;
+    float: left;
+    width: 340px;
+    height: 209px;
+    margin-left: 20px;
+}
+.game-box span{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 90px;
+    padding: 0 10px;
+    background: url("../images/stategy_tit_bg_3dfaee2.png");
+    color: #000;
+    font-size: 14px;
+    line-height: 18px;
+}
+.game-box>div span:first-of-type{
+    top: 0;
+    left: 18px;
+}
+.game-box>div span:last-of-type{
+    top: 22px;
+    left: 68px;
+}
+
+/* 游戏攻略样式结束 */
