@@ -1,0 +1,3726 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Liang Online Judge 后端相关 API",
+    "description": "Liang Online Judge 接口文档",
+    "version": "DEV-1.0"
+  },
+  "externalDocs": {
+    "description": "GitHub仓库",
+    "url": "https://github.com/codePJCP2/liang-onlinejudge-backend"
+  },
+  "servers": [
+    {
+      "url": "http://project.pjcp2-personal.cn",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/user/logout": {
+      "put": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "登出",
+        "description": "已登录用户进行登出操作",
+        "operationId": "logout",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/info/edit": {
+      "put": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "编辑用户基本信息",
+        "description": "编辑指定用户的基本信息，若不是本人则需要相应权限",
+        "operationId": "editUserInfo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/forget-password": {
+      "put": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "忘记密码",
+        "description": "忘记密码操作",
+        "operationId": "forgetPassword",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/忘记密码请求"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test-case/": {
+      "put": {
+        "tags": [
+          "测试用例相关接口"
+        ],
+        "summary": "编辑用例文件内容",
+        "description": "编辑指定测试用例的文件内容",
+        "operationId": "editTestCaseFileContent",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestCaseFileContentUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "测试用例相关接口"
+        ],
+        "summary": "添加测试用例记录",
+        "description": "为指定题目添加测试用例，注意，需要先通过 `uploadTestCaseFile` 接口上传用例。",
+        "operationId": "addTestCase",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestCaseAddRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/judge-config/": {
+      "put": {
+        "tags": [
+          "judge-config-controller"
+        ],
+        "operationId": "updateJudgeConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JudgeConfigUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "judge-config-controller"
+        ],
+        "operationId": "addJudgeConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JudgeConfigAddRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contest/": {
+      "put": {
+        "tags": [
+          "contest-controller"
+        ],
+        "operationId": "updateContest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContestUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "contest-controller"
+        ],
+        "operationId": "addContest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContestAddRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/verification-code/phone": {
+      "post": {
+        "tags": [
+          "验证码发送相关接口"
+        ],
+        "summary": "发送短信验证码",
+        "description": "发送短信验证码，一个 ip 每分钟限制请求一次",
+        "operationId": "sendPhoneVerificationCode",
+        "parameters": [
+          {
+            "name": "phoneNumber",
+            "in": "query",
+            "description": "待发送短信验证码的手机号码",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/verification-code/email": {
+      "post": {
+        "tags": [
+          "验证码发送相关接口"
+        ],
+        "summary": "发生邮箱验证码",
+        "description": "发送邮箱验证码，一个 ip 每分钟限制请求一次",
+        "operationId": "sendEmailVerificationCode",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "待发送邮箱验证码的邮箱地址",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/role/bind": {
+      "post": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "为用户绑定角色",
+        "description": "绑定角色操作",
+        "operationId": "bindRole",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/用户角色绑定请求"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/register": {
+      "post": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "注册",
+        "description": "新用户注册接口，注册成功会自动登录",
+        "operationId": "register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegisterRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLoginUserVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/login": {
+      "post": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "登录",
+        "description": "用户登录操作",
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLoginUserVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/email/bind": {
+      "post": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "绑定/换绑邮箱",
+        "description": "绑定/换绑邮箱操作",
+        "operationId": "bindEmail",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/邮箱绑定请求"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test-case/upload": {
+      "post": {
+        "tags": [
+          "测试用例相关接口"
+        ],
+        "summary": "上传测试用例文件",
+        "description": "用于预先上传测试用例文件至服务器。若上传成功，返回对应的存储路径。\n注意，这里有 bug，请采用 Postman 或其余接口调试工具来进行接口测试!",
+        "operationId": "uploadTestCaseFile",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "required": [
+                  "file"
+                ],
+                "type": "object",
+                "properties": {
+                  "testCaseUploadRequest": {
+                    "$ref": "#/components/schemas/TestCaseUploadRequest"
+                  },
+                  "file": {
+                    "type": "string",
+                    "description": "测试用例文件",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test-case/id": {
+      "post": {
+        "tags": [
+          "测试用例相关接口"
+        ],
+        "summary": "生成用例 id",
+        "description": "用于生成添加用例时所需要的用例 id",
+        "operationId": "nextId",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tag/delete/{tagId}": {
+      "post": {
+        "tags": [
+          "题目标签相关接口"
+        ],
+        "summary": "删除标签",
+        "description": "删除标签记录信息，需要相关权限",
+        "operationId": "deleteTag",
+        "parameters": [
+          {
+            "name": "tagId",
+            "in": "path",
+            "description": "标签 id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "example": 1897845059262574593
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tag/add": {
+      "post": {
+        "tags": [
+          "题目标签相关接口"
+        ],
+        "summary": "添加或更新标签信息",
+        "description": "添加或更新标签信息",
+        "operationId": "addOrUpdateTag",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagAddOrUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/submission/": {
+      "post": {
+        "tags": [
+          "submission-controller"
+        ],
+        "operationId": "submit",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/role/permission/bind": {
+      "post": {
+        "tags": [
+          "role-controller"
+        ],
+        "operationId": "bindPermission",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolePermissionBindingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/role/add": {
+      "post": {
+        "tags": [
+          "role-controller"
+        ],
+        "operationId": "addRole",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleAddRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseRoleVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/problem/": {
+      "post": {
+        "tags": [
+          "problem-controller"
+        ],
+        "operationId": "addOrUpdateProblem",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProblemAddOrUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/permission/add": {
+      "post": {
+        "tags": [
+          "权限相关接口"
+        ],
+        "operationId": "addPermission",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermissionAddRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponsePermissionVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/file/upload/img": {
+      "post": {
+        "tags": [
+          "文件上传相关接口"
+        ],
+        "summary": "上传图片",
+        "description": "上传图片至服务器，返回相应的访问路径信息。",
+        "operationId": "uploadImg",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "required": [
+                  "file"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contest/verify": {
+      "post": {
+        "tags": [
+          "contest-controller"
+        ],
+        "operationId": "verifyContestPassword",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContestPasswordVerificationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseSetLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/role/vo": {
+      "get": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "获取自身角色列表",
+        "description": "获取已登录用户的角色信息列表",
+        "operationId": "getSelfRoleList",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseListRoleVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/login-state": {
+      "get": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "获取当前登录状态信息",
+        "description": "已登录用户获取自身当前登录状态信息",
+        "operationId": "getLoginState",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLoginUserVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/list/page": {
+      "get": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "分页查询用户信息",
+        "description": "分页获取用户信息列表，需要相应查询权限",
+        "operationId": "viewUserListByPage",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "用户 id，用于查找指定用户",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "用户 id，用于查找指定用户",
+              "example": 1896156025821814785
+            },
+            "example": 1896156025821814785
+          },
+          {
+            "name": "username",
+            "in": "query",
+            "description": "用户名称，模糊查询",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "用户名称，模糊查询",
+              "example": "admin"
+            },
+            "example": "admin"
+          },
+          {
+            "name": "nickname",
+            "in": "query",
+            "description": "用户昵称，模糊查询",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "用户昵称，模糊查询",
+              "example": "nicknameOfAdmin"
+            },
+            "example": "nicknameOfAdmin"
+          },
+          {
+            "name": "roleIdList",
+            "in": "query",
+            "description": "所属角色 id 列表，含有多个角色 id 时，会查询出至少包含指定的所有角色的用户",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "所属角色 id 列表，含有多个角色 id 时，会查询出至少包含指定的所有角色的用户",
+              "example": [
+                1001,
+                1002
+              ]
+            },
+            "example": [
+              1001,
+              1002
+            ]
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponsePageUserRoleVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/info/{userId}": {
+      "get": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "查看指定用户基本信息",
+        "description": "查看指定用户基本信息",
+        "operationId": "viewUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "待查看的用户 id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "example": 1896156025821814785
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseUserRoleVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test-case/{caseId}": {
+      "get": {
+        "tags": [
+          "测试用例相关接口"
+        ],
+        "summary": "获取测试用例 VO 对象",
+        "description": "获取指定测试用例的 VO 对象,访问不公开的测试用例时需要指定权限",
+        "operationId": "getTestCaseVO",
+        "parameters": [
+          {
+            "name": "caseId",
+            "in": "path",
+            "description": "待查询的用例记录 id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseTestCaseVO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "测试用例相关接口"
+        ],
+        "summary": "删除测试用例记录",
+        "description": "删除测试用例记录，需要测试用例管理权限",
+        "operationId": "deleteTestCase",
+        "parameters": [
+          {
+            "name": "caseId",
+            "in": "path",
+            "description": "待删除的用例记录 id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/test-case/{caseId}/content": {
+      "get": {
+        "tags": [
+          "测试用例相关接口"
+        ],
+        "summary": "获取指定测试用例的内容",
+        "description": "可以根据用例 id 与 用例类型来获取指定的测试用例文件内容，访问不公开的测试用例时需要指定权限",
+        "operationId": "getTestCaseContent",
+        "parameters": [
+          {
+            "name": "caseId",
+            "in": "path",
+            "description": "待查询的用例记录 id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "fileType",
+            "in": "query",
+            "description": "待查询的文件类型，0-输入文件，1-输出文件",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tag/list/vo": {
+      "get": {
+        "tags": [
+          "题目标签相关接口"
+        ],
+        "summary": "获取符合条件的标签信息列表",
+        "description": "获取符合条件的标签信息列表",
+        "operationId": "getAvailableTagVOList",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "标签名称，模糊查询",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "标签名称，模糊查询",
+              "example": "数组"
+            },
+            "example": "数组"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseListTagVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscribe/{submissionId}": {
+      "get": {
+        "tags": [
+          "sse-controller"
+        ],
+        "operationId": "subscribe",
+        "parameters": [
+          {
+            "name": "submissionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/SseEmitter"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/submission/{submissionId}": {
+      "get": {
+        "tags": [
+          "submission-controller"
+        ],
+        "operationId": "viewSubmission",
+        "parameters": [
+          {
+            "name": "submissionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseSubmissionVO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "submission-controller"
+        ],
+        "operationId": "deleteSubmission",
+        "parameters": [
+          {
+            "name": "submissionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/submission/page": {
+      "get": {
+        "tags": [
+          "submission-controller"
+        ],
+        "operationId": "getSubmissionVOPage",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "problemId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "executionStatus",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponsePageSubmissionVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/role/list": {
+      "get": {
+        "tags": [
+          "role-controller"
+        ],
+        "operationId": "getRoleList",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseListRoleVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/problem/{problemId}": {
+      "get": {
+        "tags": [
+          "problem-controller"
+        ],
+        "operationId": "viewProblemVOById",
+        "parameters": [
+          {
+            "name": "problemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseProblemVO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "problem-controller"
+        ],
+        "operationId": "deleteProblem",
+        "parameters": [
+          {
+            "name": "problemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/problem/page": {
+      "get": {
+        "tags": [
+          "problem-controller"
+        ],
+        "operationId": "listProblemByPage",
+        "parameters": [
+          {
+            "name": "problemId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "difficulty",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "tagIdList",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponsePageProblemVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/problem/languages": {
+      "get": {
+        "tags": [
+          "problem-controller"
+        ],
+        "operationId": "getSupportedLanguages",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseListCodingLanguageEnum"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/permission/list": {
+      "get": {
+        "tags": [
+          "权限相关接口"
+        ],
+        "operationId": "getPermissionList",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseListPermissionVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contest/{contestId}/vo": {
+      "get": {
+        "tags": [
+          "contest-controller"
+        ],
+        "operationId": "getContestVOById",
+        "parameters": [
+          {
+            "name": "contestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseContestVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contest/vo/page": {
+      "get": {
+        "tags": [
+          "contest-controller"
+        ],
+        "operationId": "getContestVOPage",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sortField",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponsePageContestVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/role/unbind": {
+      "delete": {
+        "tags": [
+          "用户相关接口"
+        ],
+        "summary": "为用户解绑角色",
+        "description": "解绑角色操作",
+        "operationId": "unbindRole",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/用户角色解绑请求"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/role/permission/unbind": {
+      "delete": {
+        "tags": [
+          "role-controller"
+        ],
+        "operationId": "unbindPermission",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolePermissionUnbindingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/role/delete/{roleId}": {
+      "delete": {
+        "tags": [
+          "role-controller"
+        ],
+        "operationId": "deleteRole",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/permission/delete/{permId}": {
+      "delete": {
+        "tags": [
+          "权限相关接口"
+        ],
+        "operationId": "deletePermission",
+        "parameters": [
+          {
+            "name": "permId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/judge-config/{configId}": {
+      "delete": {
+        "tags": [
+          "judge-config-controller"
+        ],
+        "operationId": "deleteJudgeConfig",
+        "parameters": [
+          {
+            "name": "configId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contest/{contestId}": {
+      "delete": {
+        "tags": [
+          "contest-controller"
+        ],
+        "operationId": "deleteContest",
+        "parameters": [
+          {
+            "name": "contestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseLong"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BaseResponseObject": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "type": "object",
+            "description": "夹带返回的数据信息"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "UserUpdateRequest": {
+        "required": [
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "待更新信息的用户 id",
+            "format": "int64",
+            "example": 1896156025821814785
+          },
+          "avatarPath": {
+            "type": "string",
+            "description": "更新后的头像访问 URL ，无需更新请不要夹带此项!",
+            "default": "https://i2.hdslb.com/bfs/face/6b6c86d352f7b25f094d738d2bba65cbd24be2e7.jpg"
+          },
+          "nickname": {
+            "type": "string",
+            "description": "用户昵称",
+            "example": "nicknameOfAdmin"
+          }
+        },
+        "description": "用户信息更新请求体"
+      },
+      "忘记密码请求": {
+        "required": [
+          "accountName",
+          "confirmPassword",
+          "password",
+          "verificationCode"
+        ],
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "type": "string",
+            "description": "验证账号名称，可以是邮箱/手机号"
+          },
+          "verificationCode": {
+            "type": "string",
+            "description": "对应验证账号收到的验证码"
+          },
+          "password": {
+            "maxLength": 20,
+            "minLength": 8,
+            "type": "string",
+            "description": "新密码，8 - 20 个字符之间"
+          },
+          "confirmPassword": {
+            "maxLength": 20,
+            "minLength": 8,
+            "type": "string",
+            "description": "确认新密码，需要与新密码一致"
+          }
+        }
+      },
+      "TestCaseFileContentUpdateRequest": {
+        "required": [
+          "caseId",
+          "content",
+          "fileType"
+        ],
+        "type": "object",
+        "properties": {
+          "caseId": {
+            "type": "integer",
+            "description": "待修改的用例记录 id",
+            "format": "int64",
+            "example": 1899426546897125376
+          },
+          "fileType": {
+            "type": "integer",
+            "description": "待修改的用例文件类型，0-输入文件，1-输出文件",
+            "format": "int32",
+            "example": 0,
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "content": {
+            "type": "string",
+            "description": "文件修改后的内容，会直接进行覆盖而不是拼接",
+            "example": "1 2"
+          }
+        },
+        "description": "测试用例文件内容更新请求"
+      },
+      "JudgeConfigUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "configId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "language": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memoryLimit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "timeLimit": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ContestProblemAddRequest": {
+        "type": "object",
+        "properties": {
+          "contestId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "displayOrder": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ContestUpdateRequest": {
+        "required": [
+          "contestDescription",
+          "contestId",
+          "creatorId",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "contestId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "contestDescription": {
+            "type": "string"
+          },
+          "creatorId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64"
+          },
+          "encrypted": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "encryptPassword": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "visibleState": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "contestProblemAddRequestList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContestProblemAddRequest"
+            }
+          }
+        }
+      },
+      "用户角色绑定请求": {
+        "required": [
+          "roleIdList",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "待绑定角色的用户 id",
+            "format": "int64",
+            "example": 1896156025821814785
+          },
+          "roleIdList": {
+            "type": "array",
+            "description": "待绑定的角色 id 列表，含有多个角色 id 时，同时绑定多个角色",
+            "example": [
+              1001,
+              1002
+            ],
+            "items": {
+              "type": "integer",
+              "description": "待绑定的角色 id 列表，含有多个角色 id 时，同时绑定多个角色",
+              "format": "int64"
+            }
+          }
+        }
+      },
+      "UserRegisterRequest": {
+        "required": [
+          "accountName",
+          "confirmPassword",
+          "password",
+          "username",
+          "verificationCode"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "maxLength": 15,
+            "minLength": 2,
+            "type": "string",
+            "description": "用户名称",
+            "example": "admin"
+          },
+          "password": {
+            "maxLength": 20,
+            "minLength": 8,
+            "type": "string",
+            "description": "密码，8 - 20 个字符之间"
+          },
+          "confirmPassword": {
+            "maxLength": 20,
+            "minLength": 8,
+            "type": "string",
+            "description": "确认密码，需要与密码一致"
+          },
+          "accountName": {
+            "type": "string",
+            "description": "用于验证的账户名称，可以是邮箱或手机号"
+          },
+          "verificationCode": {
+            "type": "string",
+            "description": "6 位验证码，在注册前请先获取验证码",
+            "example": "653721"
+          }
+        },
+        "description": "用户注册请求体"
+      },
+      "BaseResponseLoginUserVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/LoginUserVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "LoginUserVO": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "当前登录用户 id",
+            "format": "int64",
+            "example": 1896156025821814785
+          },
+          "avatarPath": {
+            "type": "string",
+            "description": "用户头像路径",
+            "default": "https://i2.hdslb.com/bfs/face/6b6c86d352f7b25f094d738d2bba65cbd24be2e7.jpg"
+          },
+          "username": {
+            "type": "string",
+            "description": "用户名称",
+            "example": "admin"
+          },
+          "nickname": {
+            "type": "string",
+            "description": "用户昵称",
+            "example": "nicknameOfAdmin"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "(脱敏后的) 手机号码",
+            "example": "18643279501"
+          },
+          "email": {
+            "type": "string",
+            "description": "(脱敏后的) 邮箱信息",
+            "example": "21763352784@qq.com"
+          },
+          "createTime": {
+            "type": "string",
+            "description": "用户注册时间",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "description": "用户信息最后更新时间",
+            "format": "date-time"
+          },
+          "token": {
+            "type": "string",
+            "description": "访问 token，JWT 格式"
+          },
+          "roleValueList": {
+            "type": "array",
+            "description": "用户角色标识字符串列表",
+            "example": [
+              "problem_admin",
+              "user"
+            ],
+            "items": {
+              "type": "string",
+              "description": "用户角色标识字符串列表",
+              "example": "[\"problem_admin\",\"user\"]"
+            }
+          }
+        },
+        "description": "用户登录信息"
+      },
+      "UserLoginRequest": {
+        "required": [
+          "accountName",
+          "credential",
+          "loginType"
+        ],
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "type": "string",
+            "description": "账户名称，可以是用户名/邮箱/手机号中的任何一种"
+          },
+          "credential": {
+            "type": "string",
+            "description": "密码(用户名-密码登录) 或 验证码(手机/邮箱登录)"
+          },
+          "loginType": {
+            "maximum": 3,
+            "minimum": 0,
+            "type": "integer",
+            "description": "登录类型，默认为 用户名-密码 登录(0)。其余可选类型：手机-验证码登录(1，暂不支持)、邮箱验证码登录(2)、GitHub 第三方登录(3，暂不支持)",
+            "format": "int32",
+            "example": 0,
+            "default": 0,
+            "enum": [
+              0,
+              2
+            ]
+          },
+          "rememberMe": {
+            "type": "boolean",
+            "description": "是否为\"记住我模式\"，如果为 true 则 7 天内免登录",
+            "example": true
+          }
+        },
+        "description": "用户登录请求体"
+      },
+      "邮箱绑定请求": {
+        "required": [
+          "newEmail",
+          "userId",
+          "verificationCode"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "待换绑邮箱的的用户 id",
+            "format": "int64",
+            "example": 1896156025821814785
+          },
+          "oldEmail": {
+            "type": "string",
+            "description": "已绑定的旧邮箱，若未绑定则为 null",
+            "example": "21763352784@qq.com"
+          },
+          "newEmail": {
+            "type": "string",
+            "description": "待绑定的新邮箱",
+            "example": "21761192784@qq.com"
+          },
+          "verificationCode": {
+            "maxLength": 6,
+            "minLength": 6,
+            "type": "string",
+            "description": "6 位验证码，在绑定新邮箱前请先获取验证码",
+            "example": "653721"
+          }
+        }
+      },
+      "TestCaseUploadRequest": {
+        "required": [
+          "caseId",
+          "fileUploadType",
+          "problemId",
+          "publicState"
+        ],
+        "type": "object",
+        "properties": {
+          "caseId": {
+            "type": "integer",
+            "description": "预先生成的测试用例 id, 通过 `nextId` 接口预先生成",
+            "format": "int64",
+            "example": 1899426546897125376
+          },
+          "problemId": {
+            "type": "integer",
+            "description": "该测试用例关联的题目 id",
+            "format": "int64",
+            "example": 1898341196276908033
+          },
+          "publicState": {
+            "type": "integer",
+            "description": "该测试用例的公开状态, 0-仅管理员可见 1-公开",
+            "format": "int32",
+            "example": 1,
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "fileUploadType": {
+            "type": "integer",
+            "description": "待上传的用例文件类型，0-输入文件，1-输出文件",
+            "format": "int32",
+            "example": 0,
+            "enum": [
+              0,
+              1
+            ]
+          }
+        },
+        "description": "测试用例文件上传请求"
+      },
+      "BaseResponseString": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "type": "string",
+            "description": "夹带返回的数据信息"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "BaseResponseLong": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "type": "integer",
+            "description": "夹带返回的数据信息",
+            "format": "int64"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "TestCaseAddRequest": {
+        "required": [
+          "caseId",
+          "inputCasePath",
+          "outputCasePath",
+          "problemId",
+          "publicState"
+        ],
+        "type": "object",
+        "properties": {
+          "caseId": {
+            "type": "integer",
+            "description": "预先生成的测试用例 id, 通过 `nextId` 接口预先生成",
+            "format": "int64",
+            "example": 1899426546897125376
+          },
+          "problemId": {
+            "type": "integer",
+            "description": "该测试用例关联的题目 id",
+            "format": "int64",
+            "example": 1898341196276908033
+          },
+          "publicState": {
+            "type": "integer",
+            "description": "该测试用例的公开状态, 0-仅管理员可见 1-公开",
+            "format": "int32",
+            "example": 1,
+            "enum": [
+              0,
+              1
+            ]
+          },
+          "inputCasePath": {
+            "type": "string",
+            "description": "输入用例所在路径，需要先通过 `uploadTestCaseFile` 接口进行上传，以该接口返回的路径作为参数",
+            "example": "problem-1898341196276908033/public/input/1899426546897125376.txt"
+          },
+          "outputCasePath": {
+            "type": "string",
+            "description": "输出用例所在路径，需要先通过 `uploadTestCaseFile` 接口进行上传，以该接口返回的路径作为参数",
+            "example": "problem-1898341196276908033/public/output/1899426546897125376.txt"
+          }
+        },
+        "description": "测试用例记录添加请求"
+      },
+      "TagAddOrUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "tagId": {
+            "type": "integer",
+            "description": "标签 id",
+            "format": "int64",
+            "example": 1897845059262574593
+          },
+          "name": {
+            "type": "string",
+            "description": "标签名称",
+            "example": "数组"
+          },
+          "description": {
+            "type": "string",
+            "description": "标签描述 (更准确地来说，是标签所属大类名称)",
+            "example": "基本题型"
+          }
+        },
+        "description": "标签添加或更新请求"
+      },
+      "SubmitRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "contestId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "language": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string"
+          },
+          "submitIP": {
+            "type": "string"
+          }
+        }
+      },
+      "RolePermissionBindingRequest": {
+        "required": [
+          "permIdList",
+          "roleId"
+        ],
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "permIdList": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      },
+      "RoleAddRequest": {
+        "type": "object",
+        "properties": {
+          "roleName": {
+            "type": "string"
+          },
+          "roleValue": {
+            "type": "string"
+          }
+        }
+      },
+      "BaseResponseRoleVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/RoleVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "RoleVO": {
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "description": "角色 id 信息",
+            "format": "int64",
+            "example": 1896518938847846401
+          },
+          "roleName": {
+            "type": "string",
+            "description": "对应的角色显示名称",
+            "example": "普通用户"
+          },
+          "roleValue": {
+            "type": "string",
+            "description": "用于后台标识身份的实际值",
+            "example": "user"
+          }
+        },
+        "description": "角色信息 VO 对象"
+      },
+      "ProblemAddOrUpdateRequest": {
+        "required": [
+          "content",
+          "tagIdList"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tagIdList": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      },
+      "PermissionAddRequest": {
+        "required": [
+          "permKey",
+          "permValue"
+        ],
+        "type": "object",
+        "properties": {
+          "permKey": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string"
+          },
+          "permValue": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string"
+          }
+        }
+      },
+      "BaseResponsePermissionVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermissionVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "PermissionVO": {
+        "type": "object",
+        "properties": {
+          "permId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "permKey": {
+            "type": "string"
+          },
+          "permValue": {
+            "type": "string"
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "JudgeConfigAddRequest": {
+        "type": "object",
+        "properties": {
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "language": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memoryLimit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "timeLimit": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ContestPasswordVerificationRequest": {
+        "type": "object",
+        "properties": {
+          "contestId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "BaseResponseSetLong": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "uniqueItems": true,
+            "type": "array",
+            "description": "夹带返回的数据信息",
+            "items": {
+              "type": "integer",
+              "description": "夹带返回的数据信息",
+              "format": "int64"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "ContestAddRequest": {
+        "required": [
+          "contestDescription",
+          "creatorId",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "contestDescription": {
+            "type": "string"
+          },
+          "creatorId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64"
+          },
+          "encrypted": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "encryptPassword": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "visibleState": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "BaseResponseListRoleVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "type": "array",
+            "description": "夹带返回的数据信息",
+            "items": {
+              "$ref": "#/components/schemas/RoleVO"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "BaseResponsePageUserRoleVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageUserRoleVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "OrderItem": {
+        "type": "object",
+        "properties": {
+          "column": {
+            "type": "string"
+          },
+          "asc": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PageUserRoleVO": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserRoleVO"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "writeOnly": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "$ref": "#/components/schemas/PageUserRoleVO"
+          },
+          "searchCount": {
+            "$ref": "#/components/schemas/PageUserRoleVO"
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "writeOnly": true
+          },
+          "countId": {
+            "type": "string",
+            "writeOnly": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "UserRoleVO": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "avatarPath": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "nickname": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "roleVOList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleVO"
+            }
+          }
+        }
+      },
+      "BaseResponseUserRoleVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserRoleVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "BaseResponseTestCaseVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/TestCaseVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "TestCaseVO": {
+        "type": "object",
+        "properties": {
+          "caseId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "publicState": {
+            "type": "string",
+            "enum": [
+              "ADMIN_VIEW",
+              "PUBLIC"
+            ]
+          },
+          "inputCasePath": {
+            "type": "string"
+          },
+          "outputCasePath": {
+            "type": "string"
+          },
+          "inputCaseContent": {
+            "type": "string"
+          },
+          "outputCaseContent": {
+            "type": "string"
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "BaseResponseListTagVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "type": "array",
+            "description": "夹带返回的数据信息",
+            "items": {
+              "$ref": "#/components/schemas/TagVO"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "TagVO": {
+        "required": [
+          "description",
+          "name",
+          "tagId"
+        ],
+        "type": "object",
+        "properties": {
+          "tagId": {
+            "type": "integer",
+            "description": "标签 id",
+            "format": "int64",
+            "example": 1897845059262574593
+          },
+          "name": {
+            "type": "string",
+            "description": "标签名称",
+            "example": "数组"
+          },
+          "description": {
+            "type": "string",
+            "description": "标签描述 (更准确地来说，是标签所属大类名称)",
+            "example": "基本题型"
+          }
+        },
+        "description": "标签 VO 对象"
+      },
+      "SseEmitter": {
+        "type": "object",
+        "properties": {
+          "timeout": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "BaseResponseSubmissionVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/SubmissionVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "ExecutionDetailVO": {
+        "type": "object",
+        "properties": {
+          "detailId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "submissionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "timeUsed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "memoryUsed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "judgeResult": {
+            "type": "string",
+            "enum": [
+              "ACCEPTED",
+              "PRESENTATION_ERROR",
+              "WRONG_ANSWER",
+              "COMPILE_ERROR",
+              "TIME_LIMIT_EXCEED",
+              "MEMORY_LIMIT_EXCEED",
+              "OUTPUT_LIMIT_EXCEED",
+              "RUNTIME_ERROR",
+              "SYSTEM_ERROR",
+              "RUNNING_AND_JUDGE"
+            ]
+          },
+          "output": {
+            "type": "string"
+          }
+        }
+      },
+      "SubmissionVO": {
+        "type": "object",
+        "properties": {
+          "submissionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "C",
+              "CPP",
+              "PYTHON",
+              "JAVA",
+              "GOLANG",
+              "CSHARP",
+              "TS"
+            ]
+          },
+          "code": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "RUNNING",
+              "SUCCESS",
+              "FAILED"
+            ]
+          },
+          "judgeResult": {
+            "type": "string",
+            "enum": [
+              "ACCEPTED",
+              "PRESENTATION_ERROR",
+              "WRONG_ANSWER",
+              "COMPILE_ERROR",
+              "TIME_LIMIT_EXCEED",
+              "MEMORY_LIMIT_EXCEED",
+              "OUTPUT_LIMIT_EXCEED",
+              "RUNTIME_ERROR",
+              "SYSTEM_ERROR",
+              "RUNNING_AND_JUDGE"
+            ]
+          },
+          "executionMessage": {
+            "type": "string"
+          },
+          "timeUsed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "memoryUsed": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "simId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "simPercentage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "executionDetailVOList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExecutionDetailVO"
+            }
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "BaseResponsePageSubmissionVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageSubmissionVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "PageSubmissionVO": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SubmissionVO"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "writeOnly": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "$ref": "#/components/schemas/PageSubmissionVO"
+          },
+          "searchCount": {
+            "$ref": "#/components/schemas/PageSubmissionVO"
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "writeOnly": true
+          },
+          "countId": {
+            "type": "string",
+            "writeOnly": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "BaseResponseProblemVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProblemVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "JudgeConfigVO": {
+        "type": "object",
+        "properties": {
+          "configId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "C",
+              "CPP",
+              "PYTHON",
+              "JAVA",
+              "GOLANG",
+              "CSHARP",
+              "TS"
+            ]
+          },
+          "memoryLimit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "timeLimit": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ProblemVO": {
+        "type": "object",
+        "properties": {
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "EXAMPLE",
+              "EASY",
+              "MEDIUM",
+              "HARD"
+            ]
+          },
+          "acceptCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "submitCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tagList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TagVO"
+            }
+          },
+          "publicTestCaseList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestCaseVO"
+            }
+          },
+          "privateTestCaseList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestCaseVO"
+            }
+          },
+          "judgeConfigList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JudgeConfigVO"
+            }
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "BaseResponsePageProblemVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageProblemVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "PageProblemVO": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProblemVO"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "writeOnly": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "$ref": "#/components/schemas/PageProblemVO"
+          },
+          "searchCount": {
+            "$ref": "#/components/schemas/PageProblemVO"
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "writeOnly": true
+          },
+          "countId": {
+            "type": "string",
+            "writeOnly": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "BaseResponseListCodingLanguageEnum": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "type": "array",
+            "description": "夹带返回的数据信息",
+            "items": {
+              "type": "string",
+              "description": "夹带返回的数据信息",
+              "enum": [
+                "C",
+                "CPP",
+                "PYTHON",
+                "JAVA",
+                "GOLANG",
+                "CSHARP",
+                "TS"
+              ]
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "BaseResponseListPermissionVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "type": "array",
+            "description": "夹带返回的数据信息",
+            "items": {
+              "$ref": "#/components/schemas/PermissionVO"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "BaseResponseContestVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/ContestVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "ContestProblemVO": {
+        "type": "object",
+        "properties": {
+          "problemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "displayOrder": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "EXAMPLE",
+              "EASY",
+              "MEDIUM",
+              "HARD"
+            ]
+          },
+          "acceptCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "submitCount": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ContestVO": {
+        "type": "object",
+        "properties": {
+          "contestId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "contestDescription": {
+            "type": "string"
+          },
+          "encrypted": {
+            "type": "string",
+            "enum": [
+              "ENCRYPTED",
+              "UNENCRYPTED"
+            ]
+          },
+          "visibleState": {
+            "type": "string",
+            "enum": [
+              "HIDDEN",
+              "VISIBLE"
+            ]
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "problemContestVOList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContestProblemVO"
+            }
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "BaseResponsePageContestVO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "业务码，标识业务处理的各种状态",
+            "format": "int32",
+            "example": 20000
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageContestVO"
+          },
+          "message": {
+            "type": "string",
+            "description": "辅助标识请求状态的信息",
+            "example": "操作成功!"
+          }
+        }
+      },
+      "PageContestVO": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContestVO"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "current": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orders": {
+            "type": "array",
+            "writeOnly": true,
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "optimizeCountSql": {
+            "$ref": "#/components/schemas/PageContestVO"
+          },
+          "searchCount": {
+            "$ref": "#/components/schemas/PageContestVO"
+          },
+          "optimizeJoinOfCountSql": {
+            "type": "boolean",
+            "writeOnly": true
+          },
+          "maxLimit": {
+            "type": "integer",
+            "format": "int64",
+            "writeOnly": true
+          },
+          "countId": {
+            "type": "string",
+            "writeOnly": true
+          },
+          "pages": {
+            "type": "integer",
+            "format": "int64",
+            "deprecated": true
+          }
+        },
+        "description": "夹带返回的数据信息"
+      },
+      "用户角色解绑请求": {
+        "required": [
+          "roleIdList",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "待解绑角色的用户 id",
+            "format": "int64",
+            "example": 1896156025821814785
+          },
+          "roleIdList": {
+            "type": "array",
+            "description": "待绑定的角色 id 列表，含有多个角色 id 时，同时解绑多个角色",
+            "example": [
+              1001,
+              1002
+            ],
+            "items": {
+              "type": "integer",
+              "description": "待绑定的角色 id 列表，含有多个角色 id 时，同时解绑多个角色",
+              "format": "int64"
+            }
+          }
+        }
+      },
+      "RolePermissionUnbindingRequest": {
+        "required": [
+          "permIdList",
+          "roleId"
+        ],
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "permIdList": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-openapi": {
+    "x-setting": {
+      "customCode": 200,
+      "language": "zh-CN",
+      "enableSwaggerModels": true,
+      "swaggerModelName": "Entities",
+      "enableReloadCacheParameter": false,
+      "enableAfterScript": true,
+      "enableDocumentManage": true,
+      "enableVersion": false,
+      "enableRequestCache": true,
+      "enableFilterMultipartApis": false,
+      "enableFilterMultipartApiMethodType": "POST",
+      "enableHost": false,
+      "enableHostText": "",
+      "enableDynamicParameter": false,
+      "enableDebug": true,
+      "enableFooter": true,
+      "enableFooterCustom": false,
+      "enableSearch": true,
+      "enableOpenApi": true,
+      "enableHomeCustom": false,
+      "enableGroup": true,
+      "enableResponseCode": true
+    },
+    "x-markdownFiles": []
+  }
+}

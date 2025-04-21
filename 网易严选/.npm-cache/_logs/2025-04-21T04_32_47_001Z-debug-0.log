@@ -1,0 +1,275 @@
+0 verbose cli D:\codeEnvironment\node-v22.14.0-win-x64\node.exe D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\.npmrc
+5 silly config load:file:C:\Users\huang\.npmrc
+6 silly config load:file:D:\codeEnvironment\node\node_global\etc\npmrc
+7 verbose title npm install types-registry@latest
+8 verbose argv "install" "--ignore-scripts" "types-registry@latest"
+9 verbose logfile logs-max:10 dir:D:\ToBeProgrammer\learnHtml\htmlProject\htmlPractice\网易严选\.npm-cache\_logs\2025-04-21T04_32_47_001Z-
+10 verbose logfile D:\ToBeProgrammer\learnHtml\htmlProject\htmlPractice\网易严选\.npm-cache\_logs\2025-04-21T04_32_47_001Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmmirror.com/types-registry cache-miss
+15 http fetch GET 200 https://registry.npmmirror.com/types-registry 156ms (cache updated)
+16 silly packumentCache corgi:https://registry.npmmirror.com/types-registry set size:143623 disposed:false
+17 silly idealTree buildDeps
+18 silly fetch manifest types-registry@0.1.717
+19 silly packumentCache full:https://registry.npmmirror.com/types-registry cache-miss
+20 http fetch GET 200 https://registry.npmmirror.com/types-registry 46ms (cache updated)
+21 silly packumentCache full:https://registry.npmmirror.com/types-registry set size:225744 disposed:false
+22 silly placeDep ROOT types-registry@0.1.717 REPLACE for:  want: 0.1.717
+23 silly reify mark retired [
+23 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\types-registry'
+23 silly reify ]
+24 silly reify moves {
+24 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\types-registry': 'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\.types-registry-V6Pef8Aw'
+24 silly reify }
+25 silly audit bulk request {
+25 silly audit   '@babel/helper-string-parser': [ '7.25.9' ],
+25 silly audit   '@babel/helper-validator-identifier': [ '7.25.9' ],
+25 silly audit   '@babel/parser': [ '7.27.0' ],
+25 silly audit   '@babel/types': [ '7.27.0' ],
+25 silly audit   '@parcel/watcher': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-android-arm64': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-darwin-arm64': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-darwin-x64': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-freebsd-x64': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-linux-arm-glibc': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-linux-arm-musl': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-linux-arm64-glibc': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-linux-arm64-musl': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-linux-x64-glibc': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-linux-x64-musl': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-win32-arm64': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-win32-ia32': [ '2.5.1' ],
+25 silly audit   '@parcel/watcher-win32-x64': [ '2.5.1' ],
+25 silly audit   '@types/body-parser': [ '1.19.5' ],
+25 silly audit   '@types/bytes': [ '3.1.5' ],
+25 silly audit   '@types/caseless': [ '0.12.5' ],
+25 silly audit   '@types/clean-css': [ '4.2.11' ],
+25 silly audit   '@types/codemirror': [ '5.60.15' ],
+25 silly audit   '@types/connect': [ '3.4.38' ],
+25 silly audit   '@types/content-type': [ '1.1.8' ],
+25 silly audit   '@types/core-js': [ '2.5.8' ],
+25 silly audit   '@types/crypto-js': [ '4.2.2' ],
+25 silly audit   '@types/debug': [ '4.1.12' ],
+25 silly audit   '@types/depd': [ '1.1.37' ],
+25 silly audit   '@types/destroy': [ '1.0.3' ],
+25 silly audit   '@types/dropzone': [ '5.7.9' ],
+25 silly audit   '@types/encodeurl': [ '1.0.2' ],
+25 silly audit   '@types/escape-html': [ '1.0.4' ],
+25 silly audit   '@types/eslint': [ '9.6.1' ],
+25 silly audit   '@types/eslint-config-prettier': [ '6.11.3' ],
+25 silly audit   '@types/eslint-plugin-prettier': [ '3.1.3' ],
+25 silly audit   '@types/estree': [ '1.0.6' ],
+25 silly audit   '@types/etag': [ '1.8.3' ],
+25 silly audit   '@types/express': [ '5.0.1' ],
+25 silly audit   '@types/express-serve-static-core': [ '5.0.6' ],
+25 silly audit   '@types/file-saver': [ '2.0.7' ],
+25 silly audit   '@types/finalhandler': [ '1.2.3' ],
+25 silly audit   '@types/fresh': [ '0.5.2' ],
+25 silly audit   '@types/gradient-string': [ '1.1.6' ],
+25 silly audit   '@types/html-minifier': [ '4.0.5' ],
+25 silly audit   '@types/html-webpack-plugin': [ '3.2.9' ],
+25 silly audit   '@types/http-errors': [ '2.0.4' ],
+25 silly audit   '@types/jquery': [ '3.5.32' ],
+25 silly audit   '@types/js-cookie': [ '3.0.6' ],
+25 silly audit   '@types/json-schema': [ '7.0.15' ],
+25 silly audit   '@types/jsonlint': [ '1.6.3' ],
+25 silly audit   '@types/less': [ '3.0.8' ],
+25 silly audit   '@types/lint-staged': [ '13.3.0' ],
+25 silly audit   '@types/lodash': [ '4.17.16' ],
+25 silly audit   '@types/lodash-es': [ '4.17.12' ],
+25 silly audit   '@types/mime': [ '1.3.5' ],
+25 silly audit   '@types/mockjs': [ '1.0.10' ],
+25 silly audit   '@types/ms': [ '2.1.0' ],
+25 silly audit   '@types/multer': [ '1.4.12' ],
+25 silly audit   '@types/node': [ '22.13.13' ],
+25 silly audit   '@types/node-sass': [ '4.11.8' ],
+25 silly audit   '@types/nprogress': [ '0.2.3' ],
+25 silly audit   '@types/object-assign': [ '4.0.33' ],
+25 silly audit   '@types/on-finished': [ '2.3.4' ],
+25 silly audit   '@types/parseurl': [ '1.3.3' ],
+25 silly audit   '@types/path-browserify': [ '1.0.3' ],
+25 silly audit   '@types/pinyin': [ '2.10.2' ],
+25 silly audit   '@types/postcss-html': [ '1.5.3' ],
+25 silly audit   '@types/postcss-import': [ '14.0.3' ],
+25 silly audit   '@types/qs': [ '6.9.18' ],
+25 silly audit   '@types/range-parser': [ '1.2.7' ],
+25 silly audit   '@types/readable-stream': [ '4.0.18' ],
+25 silly audit   '@types/relateurl': [ '0.2.33' ],
+25 silly audit   '@types/request': [ '2.48.12' ],
+25 silly audit   '@types/sass-loader': [ '8.0.9' ],
+25 silly audit   '@types/script-ext-html-webpack-plugin': [ '2.1.6' ],
+25 silly audit   '@types/send': [ '0.17.4' ],
+25 silly audit   '@types/serve-static': [ '1.15.7' ],
+25 silly audit   '@types/sizzle': [ '2.3.9' ],
+25 silly audit   '@types/sortablejs': [ '1.15.8' ],
+25 silly audit   '@types/source-list-map': [ '0.1.6' ],
+25 silly audit   '@types/spark-md5': [ '3.0.5' ],
+25 silly audit   '@types/statuses': [ '2.0.5' ],
+25 silly audit   '@types/stylus': [ '0.48.43' ],
+25 silly audit   '@types/svg-sprite-loader': [ '3.9.9' ],
+25 silly audit   '@types/tapable': [ '1.0.12' ],
+25 silly audit   '@types/tern': [ '0.23.9' ],
+25 silly audit   '@types/tinycolor2': [ '1.4.6' ],
+25 silly audit   '@types/tough-cookie': [ '4.0.5' ],
+25 silly audit   '@types/type-is': [ '1.6.7' ],
+25 silly audit   '@types/uglify-js': [ '3.17.5' ],
+25 silly audit   '@types/utils-merge': [ '1.0.0' ],
+25 silly audit   '@types/vue-splitpane': [ '1.0.5' ],
+25 silly audit   '@types/webpack': [ '4.41.40' ],
+25 silly audit   '@types/webpack-sources': [ '3.2.3' ],
+25 silly audit   'source-map': [ '0.7.4', '0.6.1' ],
+25 silly audit   '@vue/compiler-sfc': [ '2.7.16' ],
+25 silly audit   anymatch: [ '3.1.3' ],
+25 silly audit   asynckit: [ '0.4.0' ],
+25 silly audit   braces: [ '3.0.3' ],
+25 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+25 silly audit   chokidar: [ '4.0.3' ],
+25 silly audit   'combined-stream': [ '1.0.8' ],
+25 silly audit   csstype: [ '3.1.3' ],
+25 silly audit   'delayed-stream': [ '1.0.0' ],
+25 silly audit   'detect-libc': [ '1.0.3' ],
+25 silly audit   'dunder-proto': [ '1.0.1' ],
+25 silly audit   'es-define-property': [ '1.0.1' ],
+25 silly audit   'es-errors': [ '1.3.0' ],
+25 silly audit   'es-object-atoms': [ '1.1.1' ],
+25 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+25 silly audit   'fill-range': [ '7.1.1' ],
+25 silly audit   'form-data': [ '2.5.3' ],
+25 silly audit   'safe-buffer': [ '5.2.1', '5.1.2' ],
+25 silly audit   'function-bind': [ '1.1.2' ],
+25 silly audit   'get-intrinsic': [ '1.3.0' ],
+25 silly audit   'get-proto': [ '1.0.1' ],
+25 silly audit   gopd: [ '1.2.0' ],
+25 silly audit   'has-symbols': [ '1.1.0' ],
+25 silly audit   'has-tostringtag': [ '1.0.2' ],
+25 silly audit   hasown: [ '2.0.2' ],
+25 silly audit   immutable: [ '5.1.1' ],
+25 silly audit   'is-extglob': [ '2.1.1' ],
+25 silly audit   'is-glob': [ '4.0.3' ],
+25 silly audit   'is-number': [ '7.0.0' ],
+25 silly audit   'math-intrinsics': [ '1.1.0' ],
+25 silly audit   micromatch: [ '4.0.8' ],
+25 silly audit   'mime-db': [ '1.52.0' ],
+25 silly audit   'mime-types': [ '2.1.35' ],
+25 silly audit   nanoid: [ '3.3.11' ],
+25 silly audit   'node-addon-api': [ '7.1.1' ],
+25 silly audit   'normalize-path': [ '3.0.0' ],
+25 silly audit   picocolors: [ '1.1.1' ],
+25 silly audit   picomatch: [ '2.3.1' ],
+25 silly audit   postcss: [ '8.5.3' ],
+25 silly audit   prettier: [ '2.8.8' ],
+25 silly audit   readdirp: [ '4.1.2' ],
+25 silly audit   sass: [ '1.86.1' ],
+25 silly audit   'source-map-js': [ '1.2.1' ],
+25 silly audit   'to-regex-range': [ '5.0.1' ],
+25 silly audit   'undici-types': [ '6.20.0' ],
+25 silly audit   vue: [ '2.7.16' ],
+25 silly audit   'types-registry': [ '0.1.717' ]
+25 silly audit }
+26 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-win32-ia32
+27 silly reify mark deleted [
+27 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-win32-ia32'
+27 silly reify ]
+28 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-win32-arm64
+29 silly reify mark deleted [
+29 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-win32-arm64'
+29 silly reify ]
+30 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-x64-musl
+31 silly reify mark deleted [
+31 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-x64-musl'
+31 silly reify ]
+32 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-x64-glibc
+33 silly reify mark deleted [
+33 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-x64-glibc'
+33 silly reify ]
+34 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm64-musl
+35 silly reify mark deleted [
+35 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm64-musl'
+35 silly reify ]
+36 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm64-glibc
+37 silly reify mark deleted [
+37 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm64-glibc'
+37 silly reify ]
+38 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm-musl
+39 silly reify mark deleted [
+39 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm-musl'
+39 silly reify ]
+40 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm-glibc
+41 silly reify mark deleted [
+41 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm-glibc'
+41 silly reify ]
+42 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-freebsd-x64
+43 silly reify mark deleted [
+43 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-freebsd-x64'
+43 silly reify ]
+44 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-darwin-x64
+45 silly reify mark deleted [
+45 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-darwin-x64'
+45 silly reify ]
+46 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-darwin-arm64
+47 silly reify mark deleted [
+47 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-darwin-arm64'
+47 silly reify ]
+48 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-android-arm64
+49 silly reify mark deleted [
+49 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-android-arm64'
+49 silly reify ]
+50 http cache types-registry@https://registry.npmmirror.com/types-registry/-/types-registry-0.1.717.tgz 0ms (cache hit)
+51 silly tarball no local data for types-registry@https://registry.npmmirror.com/types-registry/-/types-registry-0.1.717.tgz. Extracting by manifest.
+52 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/advisories/bulk 14ms
+53 silly audit bulk request failed [object Object]
+54 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/audits/quick 10ms
+55 verbose audit error HttpErrorGeneral: 404 Not Found - POST https://registry.npmmirror.com/-/npm/v1/security/audits/quick - [NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet
+55 verbose audit error     at D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\npm-registry-fetch\lib\check-response.js:103:15
+55 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+55 verbose audit error     at async [getReport] (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:336:21)
+55 verbose audit error     at async AuditReport.run (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:106:19) {
+55 verbose audit error   headers: [Object: null prototype] {
+55 verbose audit error     server: [ 'Tengine' ],
+55 verbose audit error     date: [ 'Mon, 21 Apr 2025 04:33:04 GMT' ],
+55 verbose audit error     'content-type': [ 'application/json' ],
+55 verbose audit error     'transfer-encoding': [ 'chunked' ],
+55 verbose audit error     connection: [ 'keep-alive' ],
+55 verbose audit error     'strict-transport-security': [ 'max-age=5184000' ],
+55 verbose audit error     via: [ 'kunlun19.cn7140[,404666]' ],
+55 verbose audit error     'timing-allow-origin': [ '*' ],
+55 verbose audit error     eagleid: [ '6f035b2717452099845556943e' ],
+55 verbose audit error     'x-fetch-attempts': [ '1' ]
+55 verbose audit error   },
+55 verbose audit error   statusCode: 404,
+55 verbose audit error   code: 'E404',
+55 verbose audit error   method: 'POST',
+55 verbose audit error   uri: 'https://registry.npmmirror.com/-/npm/v1/security/audits/quick',
+55 verbose audit error   body: {
+55 verbose audit error     error: '[NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet'
+55 verbose audit error   },
+55 verbose audit error   pkgid: undefined
+55 verbose audit error }
+56 silly audit error [object Object]
+57 silly audit report null
+58 http fetch GET 200 https://cdn.npmmirror.com/packages/types-registry/0.1.717/types-registry-0.1.717.tgz 234ms (cache miss)
+59 silly ADD
+60 silly ADD
+61 silly ADD
+62 silly ADD
+63 silly ADD
+64 silly ADD
+65 silly ADD
+66 silly ADD
+67 silly ADD
+68 silly ADD
+69 silly ADD
+70 silly ADD
+71 silly CHANGE node_modules/types-registry
+72 verbose cwd C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8
+73 verbose os Windows_NT 10.0.22631
+74 verbose node v22.14.0
+75 verbose npm  v10.9.2
+76 verbose exit 0
+77 info ok

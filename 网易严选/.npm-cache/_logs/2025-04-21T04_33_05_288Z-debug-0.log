@@ -1,0 +1,434 @@
+0 verbose cli D:\codeEnvironment\node-v22.14.0-win-x64\node.exe D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\.npmrc
+5 silly config load:file:C:\Users\huang\.npmrc
+6 silly config load:file:D:\codeEnvironment\node\node_global\etc\npmrc
+7 verbose title npm install @types/codemirror@ts5.8 @types/core-js@ts5.8 @types/crypto-js@ts5.8 @types/dropzone@ts5.8 @types/file-saver@ts5.8 @types/js-cookie@ts5.8 @types/jsonlint@ts5.8 @types/multer@ts5.8 @types/nprogress@ts5.8 @types/pinyin@ts5.8 @types/sortablejs@ts5.8 @types/spark-md5@ts5.8 @types/vue-splitpane@ts5.8 @types/connect@ts5.8 @types/html-webpack-plugin@ts5.8 @types/lint-staged@ts5.8 @types/mockjs@ts5.8 @types/sass-loader@ts5.8 @types/script-ext-html-webpack-plugin@ts5.8 @types/serve-static@ts5.8 @types/svg-sprite-loader@ts5.8 @types/request@ts5.8
+8 verbose argv "install" "--ignore-scripts" "@types/codemirror@ts5.8" "@types/core-js@ts5.8" "@types/crypto-js@ts5.8" "@types/dropzone@ts5.8" "@types/file-saver@ts5.8" "@types/js-cookie@ts5.8" "@types/jsonlint@ts5.8" "@types/multer@ts5.8" "@types/nprogress@ts5.8" "@types/pinyin@ts5.8" "@types/sortablejs@ts5.8" "@types/spark-md5@ts5.8" "@types/vue-splitpane@ts5.8" "@types/connect@ts5.8" "@types/html-webpack-plugin@ts5.8" "@types/lint-staged@ts5.8" "@types/mockjs@ts5.8" "@types/sass-loader@ts5.8" "@types/script-ext-html-webpack-plugin@ts5.8" "@types/serve-static@ts5.8" "@types/svg-sprite-loader@ts5.8" "@types/request@ts5.8" "--save-dev" "--user-agent" "typesInstaller/5.8.2"
+9 verbose logfile logs-max:10 dir:D:\ToBeProgrammer\learnHtml\htmlProject\htmlPractice\网易严选\.npm-cache\_logs\2025-04-21T04_33_05_288Z-
+10 verbose logfile D:\ToBeProgrammer\learnHtml\htmlProject\htmlPractice\网易严选\.npm-cache\_logs\2025-04-21T04_33_05_288Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcodemirror cache-miss
+15 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcore-js cache-miss
+16 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcrypto-js cache-miss
+17 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fdropzone cache-miss
+18 silly packumentCache corgi:https://registry.npmmirror.com/@types%2ffile-saver cache-miss
+19 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fjs-cookie cache-miss
+20 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fjsonlint cache-miss
+21 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fmulter cache-miss
+22 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fnprogress cache-miss
+23 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fpinyin cache-miss
+24 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fsortablejs cache-miss
+25 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fspark-md5 cache-miss
+26 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fvue-splitpane cache-miss
+27 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fconnect cache-miss
+28 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fhtml-webpack-plugin cache-miss
+29 silly packumentCache corgi:https://registry.npmmirror.com/@types%2flint-staged cache-miss
+30 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fmockjs cache-miss
+31 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fsass-loader cache-miss
+32 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fscript-ext-html-webpack-plugin cache-miss
+33 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fserve-static cache-miss
+34 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fsvg-sprite-loader cache-miss
+35 silly packumentCache corgi:https://registry.npmmirror.com/@types%2frequest cache-miss
+36 http fetch GET 200 https://registry.npmmirror.com/@types%2fcrypto-js 327ms (cache revalidated)
+37 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcrypto-js set size:21980 disposed:false
+38 http fetch GET 200 https://registry.npmmirror.com/@types%2ffile-saver 340ms (cache revalidated)
+39 silly packumentCache corgi:https://registry.npmmirror.com/@types%2ffile-saver set size:8681 disposed:false
+40 http fetch GET 200 https://registry.npmmirror.com/@types%2fcodemirror 342ms (cache revalidated)
+41 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcodemirror set size:56543 disposed:false
+42 http fetch GET 200 https://registry.npmmirror.com/@types%2fmulter 341ms (cache revalidated)
+43 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fmulter set size:21552 disposed:false
+44 http fetch GET 200 https://registry.npmmirror.com/@types%2fspark-md5 341ms (cache revalidated)
+45 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fspark-md5 set size:4139 disposed:false
+46 http fetch GET 200 https://registry.npmmirror.com/@types%2flint-staged 341ms (cache revalidated)
+47 silly packumentCache corgi:https://registry.npmmirror.com/@types%2flint-staged set size:4100 disposed:false
+48 http fetch GET 200 https://registry.npmmirror.com/@types%2fhtml-webpack-plugin 342ms (cache revalidated)
+49 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fhtml-webpack-plugin set size:13243 disposed:false
+50 http fetch GET 200 https://registry.npmmirror.com/@types%2fcore-js 346ms (cache revalidated)
+51 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fcore-js set size:18749 disposed:false
+52 http fetch GET 200 https://registry.npmmirror.com/@types%2fdropzone 346ms (cache revalidated)
+53 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fdropzone set size:39861 disposed:false
+54 http fetch GET 200 https://registry.npmmirror.com/@types%2fjsonlint 347ms (cache revalidated)
+55 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fjsonlint set size:3969 disposed:false
+56 http fetch GET 200 https://registry.npmmirror.com/@types%2fsass-loader 345ms (cache revalidated)
+57 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fsass-loader set size:9231 disposed:false
+58 http fetch GET 200 https://registry.npmmirror.com/@types%2fsortablejs 349ms (cache revalidated)
+59 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fsortablejs set size:23733 disposed:false
+60 http fetch GET 200 https://registry.npmmirror.com/@types%2fnprogress 375ms (cache revalidated)
+61 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fnprogress set size:9552 disposed:false
+62 http fetch GET 200 https://registry.npmmirror.com/@types%2frequest 374ms (cache revalidated)
+63 silly packumentCache corgi:https://registry.npmmirror.com/@types%2frequest set size:33732 disposed:false
+64 http fetch GET 200 https://registry.npmmirror.com/@types%2fvue-splitpane 375ms (cache revalidated)
+65 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fvue-splitpane set size:5979 disposed:false
+66 http fetch GET 200 https://registry.npmmirror.com/@types%2fpinyin 377ms (cache revalidated)
+67 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fpinyin set size:6821 disposed:false
+68 http fetch GET 200 https://registry.npmmirror.com/@types%2fmockjs 376ms (cache revalidated)
+69 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fmockjs set size:9365 disposed:false
+70 http fetch GET 200 https://registry.npmmirror.com/@types%2fserve-static 376ms (cache revalidated)
+71 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fserve-static set size:22716 disposed:false
+72 http fetch GET 200 https://registry.npmmirror.com/@types%2fconnect 378ms (cache revalidated)
+73 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fconnect set size:10703 disposed:false
+74 http fetch GET 200 https://registry.npmmirror.com/@types%2fsvg-sprite-loader 377ms (cache revalidated)
+75 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fsvg-sprite-loader set size:11759 disposed:false
+76 http fetch GET 200 https://registry.npmmirror.com/@types%2fjs-cookie 386ms (cache revalidated)
+77 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fjs-cookie set size:17390 disposed:false
+78 http fetch GET 200 https://registry.npmmirror.com/@types%2fscript-ext-html-webpack-plugin 383ms (cache revalidated)
+79 silly packumentCache corgi:https://registry.npmmirror.com/@types%2fscript-ext-html-webpack-plugin set size:8607 disposed:false
+80 silly idealTree buildDeps
+81 silly fetch manifest @types/codemirror@5.60.15
+82 silly packumentCache full:https://registry.npmmirror.com/@types%2fcodemirror cache-miss
+83 http fetch GET 200 https://registry.npmmirror.com/@types%2fcodemirror 67ms (cache revalidated)
+84 silly packumentCache full:https://registry.npmmirror.com/@types%2fcodemirror set size:190179 disposed:false
+85 silly fetch manifest @types/connect@3.4.38
+86 silly packumentCache full:https://registry.npmmirror.com/@types%2fconnect cache-miss
+87 http fetch GET 200 https://registry.npmmirror.com/@types%2fconnect 30ms (cache revalidated)
+88 silly packumentCache full:https://registry.npmmirror.com/@types%2fconnect set size:28500 disposed:false
+89 silly fetch manifest @types/core-js@2.5.8
+90 silly packumentCache full:https://registry.npmmirror.com/@types%2fcore-js cache-miss
+91 http fetch GET 200 https://registry.npmmirror.com/@types%2fcore-js 51ms (cache revalidated)
+92 silly packumentCache full:https://registry.npmmirror.com/@types%2fcore-js set size:50629 disposed:false
+93 silly fetch manifest @types/crypto-js@4.2.2
+94 silly packumentCache full:https://registry.npmmirror.com/@types%2fcrypto-js cache-miss
+95 http fetch GET 200 https://registry.npmmirror.com/@types%2fcrypto-js 30ms (cache revalidated)
+96 silly packumentCache full:https://registry.npmmirror.com/@types%2fcrypto-js set size:58885 disposed:false
+97 silly fetch manifest @types/dropzone@5.7.9
+98 silly packumentCache full:https://registry.npmmirror.com/@types%2fdropzone cache-miss
+99 http fetch GET 200 https://registry.npmmirror.com/@types%2fdropzone 56ms (cache revalidated)
+100 silly packumentCache full:https://registry.npmmirror.com/@types%2fdropzone set size:98880 disposed:false
+101 silly fetch manifest @types/file-saver@2.0.7
+102 silly packumentCache full:https://registry.npmmirror.com/@types%2ffile-saver cache-miss
+103 http fetch GET 200 https://registry.npmmirror.com/@types%2ffile-saver 36ms (cache revalidated)
+104 silly packumentCache full:https://registry.npmmirror.com/@types%2ffile-saver set size:25420 disposed:false
+105 silly fetch manifest @types/html-webpack-plugin@3.2.9
+106 silly packumentCache full:https://registry.npmmirror.com/@types%2fhtml-webpack-plugin cache-miss
+107 http fetch GET 200 https://registry.npmmirror.com/@types%2fhtml-webpack-plugin 61ms (cache revalidated)
+108 silly packumentCache full:https://registry.npmmirror.com/@types%2fhtml-webpack-plugin set size:39299 disposed:false
+109 silly fetch manifest @types/js-cookie@3.0.6
+110 silly packumentCache full:https://registry.npmmirror.com/@types%2fjs-cookie cache-miss
+111 http fetch GET 200 https://registry.npmmirror.com/@types%2fjs-cookie 30ms (cache revalidated)
+112 silly packumentCache full:https://registry.npmmirror.com/@types%2fjs-cookie set size:48432 disposed:false
+113 silly fetch manifest @types/jsonlint@1.6.3
+114 silly packumentCache full:https://registry.npmmirror.com/@types%2fjsonlint cache-miss
+115 http fetch GET 200 https://registry.npmmirror.com/@types%2fjsonlint 55ms (cache revalidated)
+116 silly packumentCache full:https://registry.npmmirror.com/@types%2fjsonlint set size:9247 disposed:false
+117 silly fetch manifest @types/lint-staged@13.3.0
+118 silly packumentCache full:https://registry.npmmirror.com/@types%2flint-staged cache-miss
+119 http fetch GET 200 https://registry.npmmirror.com/@types%2flint-staged 58ms (cache revalidated)
+120 silly packumentCache full:https://registry.npmmirror.com/@types%2flint-staged set size:10085 disposed:false
+121 silly fetch manifest @types/mockjs@1.0.10
+122 silly packumentCache full:https://registry.npmmirror.com/@types%2fmockjs cache-miss
+123 http fetch GET 200 https://registry.npmmirror.com/@types%2fmockjs 37ms (cache revalidated)
+124 silly packumentCache full:https://registry.npmmirror.com/@types%2fmockjs set size:20273 disposed:false
+125 silly fetch manifest @types/multer@1.4.12
+126 silly packumentCache full:https://registry.npmmirror.com/@types%2fmulter cache-miss
+127 http fetch GET 200 https://registry.npmmirror.com/@types%2fmulter 55ms (cache revalidated)
+128 silly packumentCache full:https://registry.npmmirror.com/@types%2fmulter set size:67912 disposed:false
+129 silly fetch manifest @types/nprogress@0.2.3
+130 silly packumentCache full:https://registry.npmmirror.com/@types%2fnprogress cache-miss
+131 http fetch GET 200 https://registry.npmmirror.com/@types%2fnprogress 53ms (cache revalidated)
+132 silly packumentCache full:https://registry.npmmirror.com/@types%2fnprogress set size:27000 disposed:false
+133 silly fetch manifest @types/pinyin@2.10.2
+134 silly packumentCache full:https://registry.npmmirror.com/@types%2fpinyin cache-miss
+135 http fetch GET 200 https://registry.npmmirror.com/@types%2fpinyin 52ms (cache revalidated)
+136 silly packumentCache full:https://registry.npmmirror.com/@types%2fpinyin set size:16915 disposed:false
+137 silly fetch manifest @types/request@2.48.12
+138 silly packumentCache full:https://registry.npmmirror.com/@types%2frequest cache-miss
+139 http fetch GET 200 https://registry.npmmirror.com/@types%2frequest 30ms (cache revalidated)
+140 silly packumentCache full:https://registry.npmmirror.com/@types%2frequest set size:104373 disposed:false
+141 silly fetch manifest @types/sass-loader@8.0.9
+142 silly packumentCache full:https://registry.npmmirror.com/@types%2fsass-loader cache-miss
+143 http fetch GET 200 https://registry.npmmirror.com/@types%2fsass-loader 31ms (cache revalidated)
+144 silly packumentCache full:https://registry.npmmirror.com/@types%2fsass-loader set size:19539 disposed:false
+145 silly fetch manifest @types/script-ext-html-webpack-plugin@2.1.6
+146 silly packumentCache full:https://registry.npmmirror.com/@types%2fscript-ext-html-webpack-plugin cache-miss
+147 http fetch GET 200 https://registry.npmmirror.com/@types%2fscript-ext-html-webpack-plugin 52ms (cache revalidated)
+148 silly packumentCache full:https://registry.npmmirror.com/@types%2fscript-ext-html-webpack-plugin set size:19422 disposed:false
+149 silly fetch manifest @types/serve-static@1.15.7
+150 silly packumentCache full:https://registry.npmmirror.com/@types%2fserve-static cache-miss
+151 http fetch GET 200 https://registry.npmmirror.com/@types%2fserve-static 60ms (cache revalidated)
+152 silly packumentCache full:https://registry.npmmirror.com/@types%2fserve-static set size:56138 disposed:false
+153 silly fetch manifest @types/sortablejs@1.15.8
+154 silly packumentCache full:https://registry.npmmirror.com/@types%2fsortablejs cache-miss
+155 http fetch GET 200 https://registry.npmmirror.com/@types%2fsortablejs 58ms (cache revalidated)
+156 silly packumentCache full:https://registry.npmmirror.com/@types%2fsortablejs set size:60706 disposed:false
+157 silly fetch manifest @types/spark-md5@3.0.5
+158 silly packumentCache full:https://registry.npmmirror.com/@types%2fspark-md5 cache-miss
+159 http fetch GET 200 https://registry.npmmirror.com/@types%2fspark-md5 54ms (cache revalidated)
+160 silly packumentCache full:https://registry.npmmirror.com/@types%2fspark-md5 set size:12222 disposed:false
+161 silly fetch manifest @types/svg-sprite-loader@3.9.9
+162 silly packumentCache full:https://registry.npmmirror.com/@types%2fsvg-sprite-loader cache-miss
+163 http fetch GET 200 https://registry.npmmirror.com/@types%2fsvg-sprite-loader 257ms (cache revalidated)
+164 silly packumentCache full:https://registry.npmmirror.com/@types%2fsvg-sprite-loader set size:21819 disposed:false
+165 silly fetch manifest @types/vue-splitpane@1.0.5
+166 silly packumentCache full:https://registry.npmmirror.com/@types%2fvue-splitpane cache-miss
+167 http fetch GET 200 https://registry.npmmirror.com/@types%2fvue-splitpane 60ms (cache revalidated)
+168 silly packumentCache full:https://registry.npmmirror.com/@types%2fvue-splitpane set size:13830 disposed:false
+169 silly placeDep ROOT @types/codemirror@5.60.15 REPLACE for:  want: 5.60.15
+170 silly placeDep ROOT @types/connect@3.4.38 REPLACE for:  want: 3.4.38
+171 silly placeDep ROOT @types/core-js@2.5.8 REPLACE for:  want: 2.5.8
+172 silly placeDep ROOT @types/crypto-js@4.2.2 REPLACE for:  want: 4.2.2
+173 silly placeDep ROOT @types/dropzone@5.7.9 REPLACE for:  want: 5.7.9
+174 silly placeDep ROOT @types/file-saver@2.0.7 REPLACE for:  want: 2.0.7
+175 silly placeDep ROOT @types/html-webpack-plugin@3.2.9 REPLACE for:  want: 3.2.9
+176 silly placeDep ROOT @types/js-cookie@3.0.6 REPLACE for:  want: 3.0.6
+177 silly placeDep ROOT @types/jsonlint@1.6.3 REPLACE for:  want: 1.6.3
+178 silly placeDep ROOT @types/lint-staged@13.3.0 REPLACE for:  want: 13.3.0
+179 silly placeDep ROOT @types/mockjs@1.0.10 REPLACE for:  want: 1.0.10
+180 silly placeDep ROOT @types/multer@1.4.12 REPLACE for:  want: 1.4.12
+181 silly placeDep ROOT @types/nprogress@0.2.3 REPLACE for:  want: 0.2.3
+182 silly placeDep ROOT @types/pinyin@2.10.2 REPLACE for:  want: 2.10.2
+183 silly placeDep ROOT @types/request@2.48.12 REPLACE for:  want: 2.48.12
+184 silly placeDep ROOT @types/sass-loader@8.0.9 REPLACE for:  want: 8.0.9
+185 silly placeDep ROOT @types/script-ext-html-webpack-plugin@2.1.6 REPLACE for:  want: 2.1.6
+186 silly placeDep ROOT @types/serve-static@1.15.7 REPLACE for:  want: 1.15.7
+187 silly placeDep ROOT @types/sortablejs@1.15.8 REPLACE for:  want: 1.15.8
+188 silly placeDep ROOT @types/spark-md5@3.0.5 REPLACE for:  want: 3.0.5
+189 silly placeDep ROOT @types/svg-sprite-loader@3.9.9 REPLACE for:  want: 3.9.9
+190 silly placeDep ROOT @types/vue-splitpane@1.0.5 REPLACE for:  want: 1.0.5
+191 silly reify moves {}
+192 silly audit bulk request {
+192 silly audit   '@babel/helper-string-parser': [ '7.25.9' ],
+192 silly audit   '@babel/helper-validator-identifier': [ '7.25.9' ],
+192 silly audit   '@babel/parser': [ '7.27.0' ],
+192 silly audit   '@babel/types': [ '7.27.0' ],
+192 silly audit   '@parcel/watcher': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-android-arm64': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-darwin-arm64': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-darwin-x64': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-freebsd-x64': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-linux-arm-glibc': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-linux-arm-musl': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-linux-arm64-glibc': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-linux-arm64-musl': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-linux-x64-glibc': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-linux-x64-musl': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-win32-arm64': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-win32-ia32': [ '2.5.1' ],
+192 silly audit   '@parcel/watcher-win32-x64': [ '2.5.1' ],
+192 silly audit   '@types/body-parser': [ '1.19.5' ],
+192 silly audit   '@types/bytes': [ '3.1.5' ],
+192 silly audit   '@types/caseless': [ '0.12.5' ],
+192 silly audit   '@types/clean-css': [ '4.2.11' ],
+192 silly audit   '@types/content-type': [ '1.1.8' ],
+192 silly audit   '@types/debug': [ '4.1.12' ],
+192 silly audit   '@types/depd': [ '1.1.37' ],
+192 silly audit   '@types/destroy': [ '1.0.3' ],
+192 silly audit   '@types/encodeurl': [ '1.0.2' ],
+192 silly audit   '@types/escape-html': [ '1.0.4' ],
+192 silly audit   '@types/eslint': [ '9.6.1' ],
+192 silly audit   '@types/eslint-config-prettier': [ '6.11.3' ],
+192 silly audit   '@types/eslint-plugin-prettier': [ '3.1.3' ],
+192 silly audit   '@types/estree': [ '1.0.6' ],
+192 silly audit   '@types/etag': [ '1.8.3' ],
+192 silly audit   '@types/express': [ '5.0.1' ],
+192 silly audit   '@types/express-serve-static-core': [ '5.0.6' ],
+192 silly audit   '@types/finalhandler': [ '1.2.3' ],
+192 silly audit   '@types/fresh': [ '0.5.2' ],
+192 silly audit   '@types/gradient-string': [ '1.1.6' ],
+192 silly audit   '@types/html-minifier': [ '4.0.5' ],
+192 silly audit   '@types/http-errors': [ '2.0.4' ],
+192 silly audit   '@types/jquery': [ '3.5.32' ],
+192 silly audit   '@types/json-schema': [ '7.0.15' ],
+192 silly audit   '@types/less': [ '3.0.8' ],
+192 silly audit   '@types/lodash': [ '4.17.16' ],
+192 silly audit   '@types/lodash-es': [ '4.17.12' ],
+192 silly audit   '@types/mime': [ '1.3.5' ],
+192 silly audit   '@types/ms': [ '2.1.0' ],
+192 silly audit   '@types/node': [ '22.13.13' ],
+192 silly audit   '@types/node-sass': [ '4.11.8' ],
+192 silly audit   '@types/object-assign': [ '4.0.33' ],
+192 silly audit   '@types/on-finished': [ '2.3.4' ],
+192 silly audit   '@types/parseurl': [ '1.3.3' ],
+192 silly audit   '@types/path-browserify': [ '1.0.3' ],
+192 silly audit   '@types/postcss-html': [ '1.5.3' ],
+192 silly audit   '@types/postcss-import': [ '14.0.3' ],
+192 silly audit   '@types/qs': [ '6.9.18' ],
+192 silly audit   '@types/range-parser': [ '1.2.7' ],
+192 silly audit   '@types/readable-stream': [ '4.0.18' ],
+192 silly audit   '@types/relateurl': [ '0.2.33' ],
+192 silly audit   '@types/send': [ '0.17.4' ],
+192 silly audit   '@types/sizzle': [ '2.3.9' ],
+192 silly audit   '@types/source-list-map': [ '0.1.6' ],
+192 silly audit   '@types/statuses': [ '2.0.5' ],
+192 silly audit   '@types/stylus': [ '0.48.43' ],
+192 silly audit   '@types/tapable': [ '1.0.12' ],
+192 silly audit   '@types/tern': [ '0.23.9' ],
+192 silly audit   '@types/tinycolor2': [ '1.4.6' ],
+192 silly audit   '@types/tough-cookie': [ '4.0.5' ],
+192 silly audit   '@types/type-is': [ '1.6.7' ],
+192 silly audit   '@types/uglify-js': [ '3.17.5' ],
+192 silly audit   '@types/utils-merge': [ '1.0.0' ],
+192 silly audit   '@types/webpack': [ '4.41.40' ],
+192 silly audit   '@types/webpack-sources': [ '3.2.3' ],
+192 silly audit   'source-map': [ '0.7.4', '0.6.1' ],
+192 silly audit   '@vue/compiler-sfc': [ '2.7.16' ],
+192 silly audit   anymatch: [ '3.1.3' ],
+192 silly audit   asynckit: [ '0.4.0' ],
+192 silly audit   braces: [ '3.0.3' ],
+192 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+192 silly audit   chokidar: [ '4.0.3' ],
+192 silly audit   'combined-stream': [ '1.0.8' ],
+192 silly audit   csstype: [ '3.1.3' ],
+192 silly audit   'delayed-stream': [ '1.0.0' ],
+192 silly audit   'detect-libc': [ '1.0.3' ],
+192 silly audit   'dunder-proto': [ '1.0.1' ],
+192 silly audit   'es-define-property': [ '1.0.1' ],
+192 silly audit   'es-errors': [ '1.3.0' ],
+192 silly audit   'es-object-atoms': [ '1.1.1' ],
+192 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+192 silly audit   'fill-range': [ '7.1.1' ],
+192 silly audit   'form-data': [ '2.5.3' ],
+192 silly audit   'safe-buffer': [ '5.2.1', '5.1.2' ],
+192 silly audit   'function-bind': [ '1.1.2' ],
+192 silly audit   'get-intrinsic': [ '1.3.0' ],
+192 silly audit   'get-proto': [ '1.0.1' ],
+192 silly audit   gopd: [ '1.2.0' ],
+192 silly audit   'has-symbols': [ '1.1.0' ],
+192 silly audit   'has-tostringtag': [ '1.0.2' ],
+192 silly audit   hasown: [ '2.0.2' ],
+192 silly audit   immutable: [ '5.1.1' ],
+192 silly audit   'is-extglob': [ '2.1.1' ],
+192 silly audit   'is-glob': [ '4.0.3' ],
+192 silly audit   'is-number': [ '7.0.0' ],
+192 silly audit   'math-intrinsics': [ '1.1.0' ],
+192 silly audit   micromatch: [ '4.0.8' ],
+192 silly audit   'mime-db': [ '1.52.0' ],
+192 silly audit   'mime-types': [ '2.1.35' ],
+192 silly audit   nanoid: [ '3.3.11' ],
+192 silly audit   'node-addon-api': [ '7.1.1' ],
+192 silly audit   'normalize-path': [ '3.0.0' ],
+192 silly audit   picocolors: [ '1.1.1' ],
+192 silly audit   picomatch: [ '2.3.1' ],
+192 silly audit   postcss: [ '8.5.3' ],
+192 silly audit   prettier: [ '2.8.8' ],
+192 silly audit   readdirp: [ '4.1.2' ],
+192 silly audit   sass: [ '1.86.1' ],
+192 silly audit   'source-map-js': [ '1.2.1' ],
+192 silly audit   'to-regex-range': [ '5.0.1' ],
+192 silly audit   'types-registry': [ '0.1.717' ],
+192 silly audit   'undici-types': [ '6.20.0' ],
+192 silly audit   vue: [ '2.7.16' ],
+192 silly audit   '@types/codemirror': [ '5.60.15' ],
+192 silly audit   '@types/connect': [ '3.4.38' ],
+192 silly audit   '@types/core-js': [ '2.5.8' ],
+192 silly audit   '@types/crypto-js': [ '4.2.2' ],
+192 silly audit   '@types/dropzone': [ '5.7.9' ],
+192 silly audit   '@types/file-saver': [ '2.0.7' ],
+192 silly audit   '@types/html-webpack-plugin': [ '3.2.9' ],
+192 silly audit   '@types/js-cookie': [ '3.0.6' ],
+192 silly audit   '@types/jsonlint': [ '1.6.3' ],
+192 silly audit   '@types/lint-staged': [ '13.3.0' ],
+192 silly audit   '@types/mockjs': [ '1.0.10' ],
+192 silly audit   '@types/multer': [ '1.4.12' ],
+192 silly audit   '@types/nprogress': [ '0.2.3' ],
+192 silly audit   '@types/pinyin': [ '2.10.2' ],
+192 silly audit   '@types/request': [ '2.48.12' ],
+192 silly audit   '@types/sass-loader': [ '8.0.9' ],
+192 silly audit   '@types/script-ext-html-webpack-plugin': [ '2.1.6' ],
+192 silly audit   '@types/serve-static': [ '1.15.7' ],
+192 silly audit   '@types/sortablejs': [ '1.15.8' ],
+192 silly audit   '@types/spark-md5': [ '3.0.5' ],
+192 silly audit   '@types/svg-sprite-loader': [ '3.9.9' ],
+192 silly audit   '@types/vue-splitpane': [ '1.0.5' ]
+192 silly audit }
+193 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-win32-ia32
+194 silly reify mark deleted [
+194 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-win32-ia32'
+194 silly reify ]
+195 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-win32-arm64
+196 silly reify mark deleted [
+196 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-win32-arm64'
+196 silly reify ]
+197 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-x64-musl
+198 silly reify mark deleted [
+198 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-x64-musl'
+198 silly reify ]
+199 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-x64-glibc
+200 silly reify mark deleted [
+200 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-x64-glibc'
+200 silly reify ]
+201 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm64-musl
+202 silly reify mark deleted [
+202 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm64-musl'
+202 silly reify ]
+203 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm64-glibc
+204 silly reify mark deleted [
+204 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm64-glibc'
+204 silly reify ]
+205 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm-musl
+206 silly reify mark deleted [
+206 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm-musl'
+206 silly reify ]
+207 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-linux-arm-glibc
+208 silly reify mark deleted [
+208 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-linux-arm-glibc'
+208 silly reify ]
+209 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-freebsd-x64
+210 silly reify mark deleted [
+210 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-freebsd-x64'
+210 silly reify ]
+211 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-darwin-x64
+212 silly reify mark deleted [
+212 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-darwin-x64'
+212 silly reify ]
+213 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-darwin-arm64
+214 silly reify mark deleted [
+214 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-darwin-arm64'
+214 silly reify ]
+215 verbose reify failed optional dependency C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8\node_modules\@parcel\watcher-android-arm64
+216 silly reify mark deleted [
+216 silly reify   'C:\\Users\\huang\\AppData\\Local\\Microsoft\\TypeScript\\5.8\\node_modules\\@parcel\\watcher-android-arm64'
+216 silly reify ]
+217 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/advisories/bulk 20ms
+218 silly audit bulk request failed [object Object]
+219 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/audits/quick 36ms
+220 verbose audit error HttpErrorGeneral: 404 Not Found - POST https://registry.npmmirror.com/-/npm/v1/security/audits/quick - [NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet
+220 verbose audit error     at D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\npm-registry-fetch\lib\check-response.js:103:15
+220 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+220 verbose audit error     at async [getReport] (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:336:21)
+220 verbose audit error     at async AuditReport.run (D:\codeEnvironment\node-v22.14.0-win-x64\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:106:19) {
+220 verbose audit error   headers: [Object: null prototype] {
+220 verbose audit error     server: [ 'Tengine' ],
+220 verbose audit error     date: [ 'Mon, 21 Apr 2025 04:33:07 GMT' ],
+220 verbose audit error     'content-type': [ 'application/json' ],
+220 verbose audit error     'transfer-encoding': [ 'chunked' ],
+220 verbose audit error     connection: [ 'keep-alive' ],
+220 verbose audit error     'strict-transport-security': [ 'max-age=5184000' ],
+220 verbose audit error     via: [ 'kunlun17.cn7140[,404666]' ],
+220 verbose audit error     'timing-allow-origin': [ '*' ],
+220 verbose audit error     eagleid: [ '6f035b2517452099879823010e' ],
+220 verbose audit error     'x-fetch-attempts': [ '1' ]
+220 verbose audit error   },
+220 verbose audit error   statusCode: 404,
+220 verbose audit error   code: 'E404',
+220 verbose audit error   method: 'POST',
+220 verbose audit error   uri: 'https://registry.npmmirror.com/-/npm/v1/security/audits/quick',
+220 verbose audit error   body: {
+220 verbose audit error     error: '[NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet'
+220 verbose audit error   },
+220 verbose audit error   pkgid: undefined
+220 verbose audit error }
+221 silly audit error [object Object]
+222 silly audit report null
+223 silly ADD
+224 silly ADD
+225 silly ADD
+226 silly ADD
+227 silly ADD
+228 silly ADD
+229 silly ADD
+230 silly ADD
+231 silly ADD
+232 silly ADD
+233 silly ADD
+234 silly ADD
+235 verbose cwd C:\Users\huang\AppData\Local\Microsoft\TypeScript\5.8
+236 verbose os Windows_NT 10.0.22631
+237 verbose node v22.14.0
+238 verbose npm  v10.9.2
+239 verbose exit 0
+240 info ok
